@@ -1,23 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import * as THREE from 'three'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 
+function App() {
+  return (
+    <>
+    <Canvas camera={{position: [3,3,3]}}>
+      <color attach="background" args={['lightblue']}/>
+      <OrbitControls/>
+      <mesh>
+        <boxGeometry args={[2, 2, 2]} />
+        <meshNormalMaterial/>
+      </mesh>
 
-const App = () => {
-  const [count, setCount] = useState(0)
-  const scene = new THREE.Scene()
-  scene.background = new THREE.Color('hsl(202, 9.60%, 22.50%)')
-  return scene;
+    </Canvas>
+    </>
+  );
 }
 
-return (
-  <>
-    <div className="App">
-    </div>
-  </>
-)
-
-
+  
 export default App
+  
