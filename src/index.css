@@ -6,9 +6,10 @@
 }
 
 body {
-  background: hsl(40, 4%, 14%);
+  background: hsl(0, 0%, 6%);
   font-family: 'General Sans', sans-serif;
 }
+
 
 @layer utilities {
   .c-space {
@@ -20,14 +21,66 @@ body {
   }
 
   .nav-li {
-    @apply text-neutral-400 hover:text-white max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
+    @apply text-white hover:text-yellow-600 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
   }
 
   .nav-li_a {
-    @apply text-lg md:text-base hover:text-white transition-colors;
+    @apply text-lg md:text-base hover:text-yellow-600 transition-colors;
   }
 
   .nav-sidebar {
     @apply absolute left-0 right-0 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
   }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-[#499140] from-10% via-[#f1ef67] via-50% to-[#eca73f] to-100% bg-clip-text text-transparent;
+  }
+
+  /* hero section */
+  .hero_tag {
+    @apply text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-black !leading-normal;
+  }
+}
+
+.waving-hand {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  15% {
+    transform: rotate(14deg);
+  }
+
+  30% {
+    transform: rotate(-8deg);
+  }
+
+  40% {
+    transform: rotate(14deg);
+  }
+
+  50% {
+    transform: rotate(-4deg);
+  }
+
+  60% {
+    transform: rotate(10deg);
+  }
+
+  70% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+
 }
