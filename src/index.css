@@ -10,7 +10,6 @@ body {
   font-family: 'General Sans', sans-serif;
 }
 
-
 @layer utilities {
   .c-space {
     @apply sm:px-10 px-5;
@@ -33,7 +32,8 @@ body {
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-[#499140] from-10% via-[#f1ef67] via-50% to-[#eca73f] to-100% bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#cf740b] from-10% via-[#b0d9ff] via-50% to-[#d44ece] to-100% bg-clip-text text-transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
   /* hero section */

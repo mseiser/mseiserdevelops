@@ -15,8 +15,16 @@ const MyPC = (props) => {
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
 
+  let mixer = new THREE.AnimationMixer();
+
+
+
+
   useFrame((state, delta) => {
-    group.current.rotation.y += delta * 0.4;
+
+    let action = mixer.clipAction(animations[2], scene);
+    action.play();
+    mixer.update(delta);
   });
 
   return (
