@@ -21,9 +21,9 @@ const Hero = () => {
     const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
     return (
-        <section className="min-h-screen border-2 w-full flex flex-col relative">
+        <section className="min-h-screen border-0 w-full flex flex-col relative">
             <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-                <p className="sm:text-4xl text-2xl font-medium text-white text-center font-generalsans typewriter">Hi, I am Maria </p>
+                <p className="sm:text-4xl text-2xl font-medium text-white text-left font-generalsans typewriter">Hi, I am Maria </p>
                 <p className="hero_tag text-gradient"> Game Dev Enthusiast & CS Student </p>
             </div>
 

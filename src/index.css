@@ -6,7 +6,7 @@
 }
 
 body {
-  background: hsl(0, 0%, 6%);
+  background: hsl(240, 3%, 6%);
   font-family: 'General Sans', sans-serif;
 }
 
@@ -38,7 +38,11 @@ body {
 
   /* hero section */
   .hero_tag {
-    @apply text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-black !leading-normal;
+    @apply text-left xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-black !leading-normal;
+  }
+
+  .section-gradient {
+    @apply bg-gradient-to-r from-[#cf740b] from-10% via-[#b0d9ff] via-50% to-[#d44ece] to-100%;
   }
 }
 
@@ -83,4 +87,24 @@ body {
     transform: rotate(0deg);
   }
 
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 2s steps(22, end), blink-caret .75s step-end;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 60%
+  }
 }
