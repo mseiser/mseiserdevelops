@@ -1,49 +1,41 @@
-import React from "react";
-import { navLinks } from "../constants/index.js";
-
-const NavItem = () => {
-    return (
-        <ul className="nav-ul">
-            {navLinks.map(({ id, href, name }) => (
-                <li key={id} className="nav-li">
-                    < a href={href} className="nav-li_a" onClick={() => { }}>{name}</a>
-                </li>
-            ))}
-        </ul>
-
-    );
-}
+import { IoHomeOutline, IoPersonCircleOutline, IoCodeSlashOutline, IoBriefcaseOutline } from 'react-icons/io5';
+import Settingsbar from './Settingsbar';
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = React.useState(false);
-    const toggleMenu = () => setIsOpen(!isOpen);
-
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-black/80">
-            <div className="max-w-7xl mx-auto">
-                < div className="flex justify-between items-center py-5 mx-auto c-space" >
-                    <a href="/" className="text-neutral-100 font-bold hover:text-yellow-600 transition-colors">
-                        mseiser develops
-                    </a>
-                    <button onClick={toggleMenu} className="text-neutral-100 hover:text-white focus:outline-none sm:hidden flex" aria-label="Toggle menu">
-                        <img src={isOpen ? "assets/close.svg" : "assets/menu.svg"} alt="toggle" className="w-6-h-6" />
-                    </button>
+        <div className="fixed bottom-0 z-[9999] left-1/2 p-4 transform -translate-x-1/2 flex justify-center space-x-5">
+            <nav className="flex justify-center nav-div px-4 pt-2 pb-2" style={{ backgroundColor: "hsl(var(--background))" }}>
+                <a
+                    href="#hero"
+                    className="text-text transform hover:scale-125 transition-all"
+                >
+                    <IoHomeOutline className="nav-icon" />
+                </a>
+                <a
+                    href="#about"
+                    className="text-text transform hover:scale-125 transition-all"
+                >
+                    <IoPersonCircleOutline className="nav-icon" />
+                </a>
+                <a
+                    href="#techstack"
+                    className="text-text transform hover:scale-125 transition-all"
+                >
+                    <IoCodeSlashOutline className="nav-icon" />
+                </a>
+                <a
+                    href="#projects"
+                    className="text-text transform hover:scale-125 transition-all"
+                >
+                    <IoBriefcaseOutline className="nav-icon" />
+                </a>
+            </nav>
 
-                    <nav className="hidden sm:flex">
-                        <NavItem />
-                    </nav>
-                </div >
-            </div >
-
-            {/* <-- Mobile Menu --> */}
-            < div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'} }`}>
-                <nav className="p-5">
-                    <NavItem />
-                </nav>
-            </div >
-
-        </header >
+            <div className="pt-1">
+                <Settingsbar />
+            </div>
+        </div>
     );
-}
+};
 
-export default Navbar
+export default Navbar;
