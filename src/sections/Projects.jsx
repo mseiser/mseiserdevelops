@@ -60,9 +60,12 @@ const projects = [
 
 const Projects = () => {
     return (
-        <section className="min-h-screen border-0 w-full flex flex-col relative">
+        <section id="projects" className="min-h-screen border-0 w-full flex flex-col relative">
             <div className="w-full mx-auto flex flex-col sm:flex-row sm:mt-36 mt-20 pb-20">
-                <div className="p-20 flex flex-col w-full min-h-100 border-2 border-dashed rounded-2xl m-5 border-neutral-800">
+                <div className="p-20 flex flex-col w-full min-h-100 border-2 
+            rounded-2xl m-5 border-neutral-800 overflow-x-auto" style={{
+                        backgroundColor: "hsl(var(--background))"
+                    }}>
                     <p className="text-orange-600 font-bold font-italic sm:text-6xl text-4xl pb-10">Projects</p>
 
                     <div className="bento-container">

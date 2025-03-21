@@ -113,4 +113,10 @@ body {
   background-color: #e76f51;
 }
 
-/* Different colors for each item */
+.svg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}

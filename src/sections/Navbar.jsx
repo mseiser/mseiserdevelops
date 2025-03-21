@@ -32,7 +32,7 @@ const Navbar = () => {
             </nav>
 
             <div className="pt-1">
-                <Settingsbar />
+                {/* <Settingsbar /> */}
             </div>
         </div>
     );

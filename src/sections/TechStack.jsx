@@ -7,8 +7,10 @@ import { AiOutlinePython } from 'react-icons/ai';
 const TechStack = () => {
     return (
         <section id="techstack" aria-label='Tech Stack Section' className="border-0 w-full flex flex-col relative">
-            <div className="w-full mx-auto flex flex-col sm:flex-row sm:mt-36 mt-20 c-space gap-3">
-                <div className="px-20 py-10 h-full flex flex-col gap-2 border-2 border-dotted rounded-2xl m-5 border-neutral-800 overflow-x-auto">
+            <div className="w-full mx-auto flex flex-col sm:flex-row sm:mt-36 mt-20 c-space gap-3" >
+                <div className="px-20 py-10 h-full flex flex-col gap-2 border-2 rounded-2xl m-5 border-neutral-800 overflow-x-auto" style={{
+                    backgroundColor: "hsl(var(--background))"
+                }}>
                     <p className="text-orange-600 font-bold sm:text-4xl text-2xl">Frameworks & Technologies</p>
 
                     <div className="flex place-content-center">
