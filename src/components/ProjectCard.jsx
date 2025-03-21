@@ -1,20 +1,22 @@
 import React from 'react'
 
 const ProjectCard = ({ key, project }) => {
-    const { title, description, videoUrl } = project;
+    const { title, company, technologies, videoUrl } = project;
+    const handleClick = () => {
+        window.open(project.source, '_blank', 'noopener,noreferrer');
+    };
+
     return (
-        <div className={`bento-item ${project.style}`} key={key}>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            {videoUrl && (
-                <video
-                    src={videoUrl}
-                    onMouseOver={event => event.target.play()}
-                    onMouseOut={event => event.target.pause()}
-                    controls
-                    width="300"
-                />
-            )}
+        <div
+            className={`bento-item ${project.style}`}
+            key={key}
+            onClick={handleClick}
+            style={{ cursor: 'pointer' }}
+        >
+            <div>
+                <h3>{title}</h3>
+                <p>{technologies.join(', ')}</p>
+            </div>
         </div>
     )
 }

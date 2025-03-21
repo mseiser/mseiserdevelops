@@ -74,6 +74,12 @@ body {
   text-align: center;
   border: 1px solid rgba(27, 27, 27, 0.986);
   min-height: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Different sizes for each card */
